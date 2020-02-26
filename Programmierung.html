@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Einführung in die Programmierung</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Einführung in die Programmierung</h1>
+</section>
+
+<section id="compilersprachen-vs-interpretersprachen" class="slide level2">
+<h2>Compilersprachen vs Interpretersprachen</h2>
+Compilersprachen:<br />
+
+<li class="fragment fade-in">
+Compiler übersetzt Quelltext in Maschinencode
+</li>
+<li class="fragment fade-in">
+Maschinencode ist nur von jeweiligem Betriebssystem ausführbar
+</li>
+<li class="fragment fade-in">
+Beispiel: Quelle.c <span class="math inline">\rightarrow</span> Quelle.exe
+</li>
+Interpretersprachen:<br />
+
+<li class="fragment fade-in">
+Interpreter lässt Quelltext direkt ausführen
+</li>
+<li class="fragment fade-in">
+Quelltext ist auf jedem Betriebssystem ausführbar, auf dem der Interpreter verfügbar ist
+</li>
+</section>
+<section id="compilersprachen-vs-interpretersprachen-1" class="slide level2">
+<h2>Compilersprachen vs Interpretersprachen</h2>
+<p>Aufgabe 1: Informiere dich im Internet über die Vor- und Nachteile von Compilersprachen bzw. Interpretersprachen<br />
+Aufgabe 2: Suche im Internet nach Beispielen für Compilersprachen bzw. Interpretersprachen<br />
+Aufgabe 3: Informiere dich im Internet darüber, wie Java und Python zuzuordnen sind</p>
+</section>
+<section id="java-installation" class="slide level2">
+<h2>Java Installation</h2>
+<li class="fragment fade-in">
+Um Java-Programme zu schreiben benötigt man das Java Development Kit (JDK)
+</li>
+<li class="fragment fade-in">
+Zum Ausführen von Java-Programmen reicht die Java Runtime Environment (JRE)
+</li>
+<li class="fragment fade-in">
+Beides ist auf java.com kostenlos verfügbar
+</li>
+</section>
+<section id="java-programmierung" class="slide level2">
+<h2>Java Programmierung</h2>
+<li class="fragment fade-in">
+Nach Installation des JDK kann eine Java-Datei mit der Endung .java in der Kommandozeile mit dem Befehl “javac dateiname.java” kompiliert werden
+</li>
+<li class="fragment fade-in">
+Mit “java dateiname” kann das kompilierte Programm ausgeführt werden
+</li>
+</section>
+<section id="java-programmierung-1" class="slide level2">
+<h2>Java Programmierung</h2>
+<li class="fragment fade-in">
+Zur Erstellung von Java-Dateien reicht ein Texteditor
+</li>
+<li class="fragment fade-in">
+Integrierte Entwicklungsumgebungen (IDE) bieten hilfreiche Zusatzfunktionen zum fortgeschrittenen Programmieren
+</li>
+<li class="fragment fade-in">
+Beispiele sind Eclipse, Netbeans oder zum Lernen der Java-Editor
+</li>
+</section>
+<section id="erstes-java-programm" class="slide level2">
+<h2>Erstes Java Programm</h2>
+<pre><code>public class Hallo{
+  public static void main(String... args){
+    System.out.println(&quot;Hallo in meinem ersten Programm&quot;)
+  }
+}</code></pre>
+</section>
+<section id="pakete-importieren" class="slide level2">
+<h2>Pakete importieren</h2>
+<p>Statt das Rad neu zu erfinden, kann es auch importiert werden:<br />
+Beispiel für Nachrichtenfenster:</p>
+<pre><code>import javax.swing.JOptionPane;
+public class Nachrichtenfenster{
+  public static void main(String... args){
+    JOptionPane.showMessageDialog(null, &quot;Hallo im Nachrichtenfenster&quot;)
+  }
+}</code></pre>
+</section>
+<section id="klassen" class="slide level2">
+<h2>Klassen</h2>
+<li class="fragment fade-in">
+Ein Java-Programm besteht aus mindestens einer “Klasse”
+</li>
+<li class="fragment fade-in">
+Die Klassendeklaration beginnt mit den Wörtern “public class” gefolgt vom Klassennamen
+</li>
+<li class="fragment fade-in">
+Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere Wort folgt ohne Leerzeichen beginnend mit Großbuchstaben (CamelCase-Notation)
+</li>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
