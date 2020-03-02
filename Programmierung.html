@@ -113,11 +113,17 @@ Integrierte Entwicklungsumgebungen (IDE) bieten hilfreiche Zusatzfunktionen zum 
 Beispiele sind Eclipse, Netbeans oder zum Lernen der Java-Editor
 </li>
 </section>
-<section id="erstes-java-programm" class="slide level2">
-<h2>Erstes Java Programm</h2>
+<section id="programmaufbau" class="slide level2">
+<h2>Programmaufbau</h2>
+<pre><code>public class Klassenname{
+  public static void main(String[] args){
+    Deklarationen und Anweisungen; //Hier beginnt das Programm
+  }
+}</code></pre>
+<p>Beispiel:</p>
 <pre><code>public class Hallo{
   public static void main(String... args){
-    System.out.println(&quot;Hallo in meinem ersten Programm&quot;)
+    System.out.println(&quot;Hallo in meinem ersten Programm&quot;);
   }
 }</code></pre>
 </section>
@@ -128,7 +134,7 @@ Beispiel für Nachrichtenfenster:</p>
 <pre><code>import javax.swing.JOptionPane;
 public class Nachrichtenfenster{
   public static void main(String... args){
-    JOptionPane.showMessageDialog(null, &quot;Hallo im Nachrichtenfenster&quot;)
+    JOptionPane.showMessageDialog(null, &quot;Hallo im Nachrichtenfenster&quot;);
   }
 }</code></pre>
 </section>
@@ -141,8 +147,192 @@ Ein Java-Programm besteht aus mindestens einer “Klasse”
 Die Klassendeklaration beginnt mit den Wörtern “public class” gefolgt vom Klassennamen
 </li>
 <li class="fragment fade-in">
+Klassenname=Dateiname
+</li>
+<li class="fragment fade-in">
 Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere Wort folgt ohne Leerzeichen beginnend mit Großbuchstaben (CamelCase-Notation)
 </li>
+</section>
+<section id="datentypen" class="slide level2">
+<h2>Datentypen</h2>
+<p><font size="4"></p>
+<table>
+<thead>
+<tr class="header">
+<th>Typ</th>
+<th>Wertebereich</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Ganze Zahlen</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>byte</td>
+<td>-1238…127</td>
+<td>123</td>
+</tr>
+<tr class="odd">
+<td>short</td>
+<td>-32768…32767</td>
+<td>1234</td>
+</tr>
+<tr class="even">
+<td>int</td>
+<td><span class="math inline">2\cdot 10^9...2\cdot 10^9</span></td>
+<td>12345</td>
+</tr>
+<tr class="odd">
+<td>long</td>
+<td><span class="math inline">-10^{19}...10^{19}</span></td>
+<td>123456L</td>
+</tr>
+<tr class="even">
+<td><strong>Gleitkommazahlen</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>float</td>
+<td><span class="math inline">-10^{38}...10^{38}</span></td>
+<td>1.2f</td>
+</tr>
+<tr class="even">
+<td>double</td>
+<td><span class="math inline">-10^{308}...10^{308}</span></td>
+<td>1.2</td>
+</tr>
+<tr class="odd">
+<td><strong>Wahrheitswert</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>boolean</td>
+<td>{true, false}</td>
+<td>true</td>
+</tr>
+<tr class="odd">
+<td><strong>Zeichen</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>char</td>
+<td>Unicode Zeichen</td>
+<td>‘c’</td>
+</tr>
+<tr class="odd">
+<td><strong>Zeichenkette</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>String</td>
+<td></td>
+<td>“Hallo”</td>
+</tr>
+</tbody>
+</table>
+<p></font></p>
+</section>
+<section id="anweisungen-deklarationen-und-initialisierungen" class="slide level2">
+<h2>Anweisungen, Deklarationen und Initialisierungen</h2>
+<li class="fragment fade-in">
+Ein Programm besteht aus Anweisungen, d.h. Befehlen, und Deklarationen
+</li>
+<li class="fragment fade-in">
+Anweisungen werden nacheinander abgearbeitet
+</li>
+<li class="fragment fade-in">
+Anweisungen werden mit einem Semikolon abgeschlossen
+</li>
+<li class="fragment fade-in">
+Deklarationen legen u.a. Bezeichner und Datentyp einer Variablen fest
+</li>
+<li class="fragment fade-in">
+Wird einer Variablen erstmalig ein Wert zugeordnet, spricht man von einer Initialisierung
+</li>
+</section>
+<section id="deklaration-und-initialisierung" class="slide level2">
+<h2>Deklaration und Initialisierung</h2>
+<p>Deklaration einer Variablen:</p>
+<pre><code>//&lt;Datentyp&gt; &lt;Bezeichner&gt;;
+int zahl;</code></pre>
+<p>Initialsierung (Zuweisung):</p>
+<pre><code>//&lt;Bezeichner&gt; = &lt;Wert&gt;;
+zahl = 1;</code></pre>
+<p>Deklaration und Initialisierung:</p>
+<pre><code>//&lt;Datentyp&gt; &lt;Bezeichner&gt; = &lt;Wert&gt;;
+int zahl = 1;</code></pre>
+</section>
+<section id="kommentare" class="slide level2">
+<h2>Kommentare</h2>
+<li class="fragment fade-in" data-fragment-index="0">
+Um Programme lesbarer zu machen, können Kommentare eingefügt werden, die vom Compiler ignoriert werden
+</li>
+<li class="fragment fade-in" data-fragment-index="1">
+<span class="fragment highlight-blue" data-fragment-index="1">// …</span> ist ein einzeiliger Kommentar, der mit dem Zeilenende endet
+</li>
+<li class="fragment fade-in" data-fragment-index="2">
+<span class="fragment highlight-blue" data-fragment-index="2">/* … */</span> ist ein mehrzeiliger Kommentar
+</li>
+<li class="fragment fade-in" data-fragment-index="3">
+<span class="fragment highlight-blue" data-fragment-index="3">/** … */</span> ist ein mehrzeiliger Dokumentationskommentar vor Deklarationen
+</li>
+</section>
+<section id="deklaration-und-initialisierung-übung" class="slide level2">
+<h2>Deklaration und Initialisierung (Übung)</h2>
+<p>Öffne das Programm DeklarationUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Deklaration oder eine Initialisierung vorliegt.</p>
+</section>
+<section id="blöcke" class="slide level2">
+<h2>Blöcke</h2>
+<li>
+Anweisungen können zu einem Block zusammengefasst werden
+</li>
+<li>
+Blöcke werden durch geschweifte Klammern umschlossen und sollten eingerückt werden
+</li>
+<li>
+Zwei Konventionen zur Platzierung der Klammern sind verbreitet:
+</li>
+<pre><code>public class Willkommen{
+  ...
+}
+
+public class Willkommen
+{
+  ...
+}</code></pre>
+</section>
+<section id="strings-und-texte" class="slide level2">
+<h2>Strings und Texte</h2>
+<li class="fragment fade-in" data-fragment-index="1">
+Strings sind Ketten von Zeichen
+</li>
+<li class="fragment fade-in" data-fragment-index="2">
+In Anführungszeichen gesetzter Text wird als String definiert
+</li>
+<li class="fragment fade-in" data-fragment-index="3">
+Neue Zeilen können durch <span class="fragment highlight-blue" data-fragment-index="3">\n</span> erzeugt werden
+</li>
+<li class="fragment fade-in" data-fragment-index="4">
+Mit der Anweisung <span class="fragment highlight-blue" data-fragment-index="4">System.out.println(“…”)</span> kann Text in der Konsole ausgegeben werden
+</li>
+</section>
+<section id="texte-einlesen" class="slide level2">
+<h2>Texte einlesen</h2>
+<pre><code>import java.util.Scanner;
+
+public class Text{
+  public static void main(String[] args) throws IOException{
+    Scanner in = new Scanner(System.in);
+    String text = in.nextLine();
+  }
+}</code></pre>
 </section>
     </div>
   </div>
