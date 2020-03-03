@@ -38,7 +38,7 @@ Aufgabe 3: Informiere dich im Internet darüber, wie Java und Python zuzuordnen 
 
     public class Klassenname{
       public static void main(String[] args){
-        Deklarationen und Anweisungen; //Hier beginnt das Programm
+        Definitionen und Anweisungen; //Hier beginnt das Programm
       }
     }
 
@@ -63,7 +63,7 @@ Beispiel für Nachrichtenfenster:
 
 ## Klassen
 <li class="fragment fade-in">Ein Java-Programm besteht aus mindestens einer "Klasse"</li>
-<li class="fragment fade-in">Die Klassendeklaration beginnt mit den Wörtern "public class" gefolgt vom Klassennamen</li>
+<li class="fragment fade-in">Die KlassenDefinition beginnt mit den Wörtern "public class" gefolgt vom Klassennamen</li>
 <li class="fragment fade-in">Klassenname=Dateiname</li>
 <li class="fragment fade-in">Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere Wort folgt ohne Leerzeichen beginnend mit Großbuchstaben (CamelCase-Notation)</li>
 
@@ -89,15 +89,18 @@ Beispiel für Nachrichtenfenster:
 
 </font>
 
-## Anweisungen, Deklarationen und Initialisierungen
-<li class="fragment fade-in">Ein Programm besteht aus Anweisungen, d.h. Befehlen, und Deklarationen</li>
+## Anweisungen, Definitionen, Deklarationen und Initialisierungen
+<font size="6">
+<li class="fragment fade-in">Ein Programm besteht insbesondere aus Anweisungen, d.h. Befehlen, und Definitionen</li>
 <li class="fragment fade-in">Anweisungen werden nacheinander abgearbeitet</li>
 <li class="fragment fade-in">Anweisungen werden mit einem Semikolon abgeschlossen</li>
-<li class="fragment fade-in">Deklarationen legen u.a. Bezeichner und Datentyp einer Variablen fest</li>
+<li class="fragment fade-in">Definitionen legen u.a. Bezeichner und Datentyp einer Variablen fest und reservieren entsprechenden Speicherplatz</li>
+<li class="fragment fade-in">Deklarationen machen dem Programm ebenfalls Variablen bekannt, reservieren aber keinen Speicherplatz</li>
 <li class="fragment fade-in">Wird einer Variablen erstmalig ein Wert zugeordnet, spricht man von einer Initialisierung</li>
+</font>
 
-## Deklaration und Initialisierung
-Deklaration einer Variablen:  
+## Definition und Initialisierung
+Definition einer Variablen:  
 
     //<Datentyp> <Bezeichner>;
     int zahl;
@@ -107,7 +110,7 @@ Initialsierung (Zuweisung):
     //<Bezeichner> = <Wert>;
     zahl = 1;
 
-Deklaration und Initialisierung:
+Definition und Initialisierung:
 
     //<Datentyp> <Bezeichner> = <Wert>;
     int zahl = 1;
@@ -117,10 +120,13 @@ Deklaration und Initialisierung:
 <li class="fragment fade-in" data-fragment-index="0">Um Programme lesbarer zu machen, können Kommentare eingefügt werden, die vom Compiler ignoriert werden</li>
 <li class="fragment fade-in" data-fragment-index="1"><span class="fragment highlight-blue" data-fragment-index="1">// ...</span> ist ein einzeiliger Kommentar, der mit dem Zeilenende endet</li>
 <li class="fragment fade-in" data-fragment-index="2"><span class="fragment highlight-blue" data-fragment-index="2">/* ... \*/</span> ist ein mehrzeiliger Kommentar</li>
-<li class="fragment fade-in" data-fragment-index="3"><span class="fragment highlight-blue" data-fragment-index="3">/** ... \*/</span> ist ein mehrzeiliger Dokumentationskommentar vor Deklarationen</li>
+<li class="fragment fade-in" data-fragment-index="3"><span class="fragment highlight-blue" data-fragment-index="3">/** ... \*/</span> ist ein mehrzeiliger Dokumentationskommentar vor Definitionen</li>
 
-## Deklaration und Initialisierung (Übung)
-Öffne das Programm DeklarationUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Deklaration oder eine Initialisierung vorliegt.
+## Definition und Initialisierung (Übung)
+<ol>
+<li class="fragment fade-in">Öffne das Programm DefinitionUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Definition oder eine Initialisierung vorliegt.</li>
+<li class="fragment fade-in">Öffne das Programm SelbstDefinierenUndZuweisen.java und setze die Kommentare um.</li>
+</ol>
 
 ## Blöcke
 <li>Anweisungen können zu einem Block zusammengefasst werden</li>

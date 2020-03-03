@@ -117,7 +117,7 @@ Beispiele sind Eclipse, Netbeans oder zum Lernen der Java-Editor
 <h2>Programmaufbau</h2>
 <pre><code>public class Klassenname{
   public static void main(String[] args){
-    Deklarationen und Anweisungen; //Hier beginnt das Programm
+    Definitionen und Anweisungen; //Hier beginnt das Programm
   }
 }</code></pre>
 <p>Beispiel:</p>
@@ -144,7 +144,7 @@ public class Nachrichtenfenster{
 Ein Java-Programm besteht aus mindestens einer “Klasse”
 </li>
 <li class="fragment fade-in">
-Die Klassendeklaration beginnt mit den Wörtern “public class” gefolgt vom Klassennamen
+Die KlassenDefinition beginnt mit den Wörtern “public class” gefolgt vom Klassennamen
 </li>
 <li class="fragment fade-in">
 Klassenname=Dateiname
@@ -239,10 +239,11 @@ Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere 
 </table>
 <p></font></p>
 </section>
-<section id="anweisungen-deklarationen-und-initialisierungen" class="slide level2">
-<h2>Anweisungen, Deklarationen und Initialisierungen</h2>
+<section id="anweisungen-definitionen-deklarationen-und-initialisierungen" class="slide level2">
+<h2>Anweisungen, Definitionen, Deklarationen und Initialisierungen</h2>
+<font size="6">
 <li class="fragment fade-in">
-Ein Programm besteht aus Anweisungen, d.h. Befehlen, und Deklarationen
+Ein Programm besteht insbesondere aus Anweisungen, d.h. Befehlen, und Definitionen
 </li>
 <li class="fragment fade-in">
 Anweisungen werden nacheinander abgearbeitet
@@ -251,21 +252,25 @@ Anweisungen werden nacheinander abgearbeitet
 Anweisungen werden mit einem Semikolon abgeschlossen
 </li>
 <li class="fragment fade-in">
-Deklarationen legen u.a. Bezeichner und Datentyp einer Variablen fest
+Definitionen legen u.a. Bezeichner und Datentyp einer Variablen fest und reservieren entsprechenden Speicherplatz
+</li>
+<li class="fragment fade-in">
+Deklarationen machen dem Programm ebenfalls Variablen bekannt, reservieren aber keinen Speicherplatz
 </li>
 <li class="fragment fade-in">
 Wird einer Variablen erstmalig ein Wert zugeordnet, spricht man von einer Initialisierung
 </li>
+<p></font></p>
 </section>
-<section id="deklaration-und-initialisierung" class="slide level2">
-<h2>Deklaration und Initialisierung</h2>
-<p>Deklaration einer Variablen:</p>
+<section id="definition-und-initialisierung" class="slide level2">
+<h2>Definition und Initialisierung</h2>
+<p>Definition einer Variablen:</p>
 <pre><code>//&lt;Datentyp&gt; &lt;Bezeichner&gt;;
 int zahl;</code></pre>
 <p>Initialsierung (Zuweisung):</p>
 <pre><code>//&lt;Bezeichner&gt; = &lt;Wert&gt;;
 zahl = 1;</code></pre>
-<p>Deklaration und Initialisierung:</p>
+<p>Definition und Initialisierung:</p>
 <pre><code>//&lt;Datentyp&gt; &lt;Bezeichner&gt; = &lt;Wert&gt;;
 int zahl = 1;</code></pre>
 </section>
@@ -281,12 +286,19 @@ Um Programme lesbarer zu machen, können Kommentare eingefügt werden, die vom C
 <span class="fragment highlight-blue" data-fragment-index="2">/* … */</span> ist ein mehrzeiliger Kommentar
 </li>
 <li class="fragment fade-in" data-fragment-index="3">
-<span class="fragment highlight-blue" data-fragment-index="3">/** … */</span> ist ein mehrzeiliger Dokumentationskommentar vor Deklarationen
+<span class="fragment highlight-blue" data-fragment-index="3">/** … */</span> ist ein mehrzeiliger Dokumentationskommentar vor Definitionen
 </li>
 </section>
-<section id="deklaration-und-initialisierung-übung" class="slide level2">
-<h2>Deklaration und Initialisierung (Übung)</h2>
-<p>Öffne das Programm DeklarationUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Deklaration oder eine Initialisierung vorliegt.</p>
+<section id="definition-und-initialisierung-übung" class="slide level2">
+<h2>Definition und Initialisierung (Übung)</h2>
+<ol>
+<li class="fragment fade-in">
+Öffne das Programm DefinitionUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Definition oder eine Initialisierung vorliegt.
+</li>
+<li class="fragment fade-in">
+Öffne das Programm SelbstDefinierenUndZuweisen.java und setze die Kommentare um.
+</li>
+</ol>
 </section>
 <section id="blöcke" class="slide level2">
 <h2>Blöcke</h2>
