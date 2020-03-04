@@ -5,7 +5,7 @@ revealjs-url: https://revealjs.com
 theme: white
 ...
 
-## Compilersprachen vs Interpretersprachen
+### Compilersprachen vs Interpretersprachen
 Compilersprachen:  
 <li class="fragment fade-in">Compiler übersetzt Quelltext in Maschinencode</li>
 <li class="fragment fade-in">Maschinencode ist nur von jeweiligem Betriebssystem ausführbar</li>
@@ -15,26 +15,26 @@ Interpretersprachen:
 <li class="fragment fade-in">Interpreter lässt Quelltext direkt ausführen</li>
 <li class="fragment fade-in">Quelltext ist auf jedem Betriebssystem ausführbar, auf dem der Interpreter verfügbar ist</li>
 
-## Compilersprachen vs Interpretersprachen
+### Compilersprachen vs Interpretersprachen
 Aufgabe 1: Informiere dich im Internet über die Vor- und Nachteile von Compilersprachen bzw. Interpretersprachen  
 Aufgabe 2: Suche im Internet nach Beispielen für Compilersprachen bzw. Interpretersprachen  
 Aufgabe 3: Informiere dich im Internet darüber, wie Java und Python zuzuordnen sind
 
-## Java Installation
+### Java Installation
 <li class="fragment fade-in">Um Java-Programme zu schreiben benötigt man das Java Development Kit (JDK)</li>
 <li class="fragment fade-in">Zum Ausführen von Java-Programmen reicht die Java Runtime Environment (JRE)</li>
 <li class="fragment fade-in">Beides ist auf java.com kostenlos verfügbar</li>
 
-## Java Programmierung
+### Java Programmierung
 <li class="fragment fade-in">Nach Installation des JDK kann eine Java-Datei mit der Endung .java in der Kommandozeile mit dem Befehl "javac dateiname.java" kompiliert werden</li>
 <li class="fragment fade-in">Mit "java dateiname" kann das kompilierte Programm ausgeführt werden</li>
 
-## Java Programmierung
+### Java Programmierung
 <li class="fragment fade-in">Zur Erstellung von Java-Dateien reicht ein Texteditor</li>
 <li class="fragment fade-in">Integrierte Entwicklungsumgebungen (IDE) bieten hilfreiche Zusatzfunktionen zum fortgeschrittenen Programmieren</li>
 <li class="fragment fade-in">Beispiele sind Eclipse, Netbeans oder zum Lernen der Java-Editor</li>
 
-## Programmaufbau
+### Programmaufbau
 
     public class Klassenname{
       public static void main(String[] args){
@@ -50,7 +50,7 @@ Beispiel:
       }
     }
 
-## Pakete importieren
+### Pakete importieren
 Statt das Rad neu zu erfinden, kann es auch importiert werden:  
 Beispiel für Nachrichtenfenster:  
 
@@ -61,13 +61,13 @@ Beispiel für Nachrichtenfenster:
       }
     }
 
-## Klassen
+### Klassen
 <li class="fragment fade-in">Ein Java-Programm besteht aus mindestens einer "Klasse"</li>
 <li class="fragment fade-in">Die KlassenDefinition beginnt mit den Wörtern "public class" gefolgt vom Klassennamen</li>
 <li class="fragment fade-in">Klassenname=Dateiname</li>
 <li class="fragment fade-in">Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere Wort folgt ohne Leerzeichen beginnend mit Großbuchstaben (CamelCase-Notation)</li>
 
-## Datentypen
+### Datentypen
 <font size="4">
 
 | Typ                  | Wertebereich                | Beispiel |
@@ -89,7 +89,7 @@ Beispiel für Nachrichtenfenster:
 
 </font>
 
-## Anweisungen, Definitionen, Deklarationen und Initialisierungen
+### Anweisungen, Definitionen, Deklarationen und Initialisierungen
 <font size="6">
 <li class="fragment fade-in">Ein Programm besteht insbesondere aus Anweisungen, d.h. Befehlen, und Definitionen</li>
 <li class="fragment fade-in">Anweisungen werden nacheinander abgearbeitet</li>
@@ -99,7 +99,7 @@ Beispiel für Nachrichtenfenster:
 <li class="fragment fade-in">Wird einer Variablen erstmalig ein Wert zugeordnet, spricht man von einer Initialisierung</li>
 </font>
 
-## Definition und Initialisierung
+### Definition und Initialisierung
 Definition einer Variablen:  
 
     //<Datentyp> <Bezeichner>;
@@ -116,19 +116,19 @@ Definition und Initialisierung:
     int zahl = 1;
 
 
-## Kommentare
+### Kommentare
 <li class="fragment fade-in" data-fragment-index="0">Um Programme lesbarer zu machen, können Kommentare eingefügt werden, die vom Compiler ignoriert werden</li>
 <li class="fragment fade-in" data-fragment-index="1"><span class="fragment highlight-blue" data-fragment-index="1">// ...</span> ist ein einzeiliger Kommentar, der mit dem Zeilenende endet</li>
 <li class="fragment fade-in" data-fragment-index="2"><span class="fragment highlight-blue" data-fragment-index="2">/* ... \*/</span> ist ein mehrzeiliger Kommentar</li>
 <li class="fragment fade-in" data-fragment-index="3"><span class="fragment highlight-blue" data-fragment-index="3">/** ... \*/</span> ist ein mehrzeiliger Dokumentationskommentar vor Definitionen</li>
 
-## Definition und Initialisierung (Übung)
+### Definition und Initialisierung (Übung)
 <ol>
 <li class="fragment fade-in">Öffne das Programm DefinitionUndInitialisierung.java und schreibe als Kommentar hinter der jeweiligen Zeile, ob eine Definition oder eine Initialisierung vorliegt.</li>
 <li class="fragment fade-in">Öffne das Programm SelbstDefinierenUndZuweisen.java und setze die Kommentare um.</li>
 </ol>
 
-## Blöcke
+### Blöcke
 <li>Anweisungen können zu einem Block zusammengefasst werden</li>
 <li>Blöcke werden durch geschweifte Klammern umschlossen und sollten eingerückt werden</li>
 <li>Zwei Konventionen zur Platzierung der Klammern sind verbreitet:</li>
@@ -143,19 +143,79 @@ Definition und Initialisierung:
     }
 
 
-## Strings und Texte
+### Strings und Texte
+<font size="6">
 <li class="fragment fade-in" data-fragment-index="1">Strings sind Ketten von Zeichen</li>
 <li class="fragment fade-in" data-fragment-index="2">In Anführungszeichen gesetzter Text wird als String definiert</li>
 <li class="fragment fade-in" data-fragment-index="3">Neue Zeilen können durch <span class="fragment highlight-blue" data-fragment-index="3">\\n</span> erzeugt werden</li>
 <li class="fragment fade-in" data-fragment-index="4">Mit der Anweisung <span class="fragment highlight-blue" data-fragment-index="4">System.out.println("...")</span> kann Text in der Konsole ausgegeben werden</li>
+<li class="fragment fade-in" data-fragment-index="5">Strings und Variablen können mit einem + miteinander verbunden werden, z.B. <span class="fragment highlight-blue" data-fragment-index="5">System.out.println("hier steht der Text von "+name)</span></li>
+<li class="fragment fade-in" data-fragment-index="6">Strings können durch <span class="fragment highlight-blue" data-fragment-index="6">string1.equals(string2)</span> verglichen werden</li>
+</font>
 
-## Texte einlesen
+### Texte einlesen
 
     import java.util.Scanner;
-
     public class Text{
-      public static void main(String[] args) throws IOException{
+      public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        String text = in.nextLine();
+        String text = in.nextLine(); //liest die nächste Zeile ein
+        int i = in.nextInt(); //liest die nächste Zeile als Zahl ein
+        int j = in.nextInt();
+        System.out.println(i+j);
       }
     }
+
+### Operatoren
+<font size="5">
+
+| Numerische Operatoren |                              | Logische Operatoren |                |
+| --------------------- | ---------------------------- | ------------------- | -------------- |
+| +                     | Addition                     | ==                  | Gleichheit     |
+| -                     | Subtraktion                  | !=                  | Ungleichheit   |
+| *                     | Multiplikation               | <                   | kleiner als    |
+| /                     | Division                     | <=                  | kleiner gleich |
+| %                     | Modulo (Rest einer Division) | >                   | größer als     |
+| ++                    | Inkrement                    | >=                  | größer gleich  |
+| +=                    | Inkrement und Zuweisung      | !                   | nicht          |
+| --                    | Dekrement                    | &&                  | UND            |
+| -=                    | Dekrement und Zuweisung      | \|\|                | ODER           |
+| (...)                 | Klamerung                    |                     |                |
+|                       |                              |                     |                |
+
+</font>
+
+### Bedingte Anweisungen und Verzweigungen
+
+    //Bedingte Anweisung:
+    if(bedingung){
+      //Anweisungen, die ausgeführt werden, wenn bedingung true ist
+    }
+    //Anweisungen, die unabhängig von bedingung nach der bedingten Anweisung ausgeführt wird
+
+    //Verzweigung
+    if(bedingung){
+      //Anweisungen, die ausgeführt werden, wenn bedingung true ist
+    }else{
+      //Anweisungen, die ausgeführt werden, wenn bedingung false ist
+    }
+    //Anweisungen, die unabhängig von bedingung nach der Verzweigung ausgeführt wird
+
+### Übungsaufgabe Chatbot
+<font size="5"><p style="line-height: 100%">
+Aufgabe: Schreibe einen Chatbot, der mit dem Nutzer chattet. Sorge durch sinnvolle Variablen und Kommentare dafür, dass das Programm für Andere leicht nachzuvollziehen ist und achte auf die besprochenen Konventionen. Der Dateiname soll dein Name sein.
+</p>  
+<span class="fragment fade-in">Der Chatbot / das Programm sollte folgendes erfüllen:</span>  
+<li class="fragment fade-in">Jede Ausgabe des Chatbots soll mit "Chatbot: " starten</li>
+<li class="fragment fade-in">Das Programm startet mit der Aufforderung an den Nutzer, den Chatbot zu begrüßen</li>
+<li class="fragment fade-in">Das Programm liest die Begrüßung mithilfe der Scannerklasse ein</li>
+<li class="fragment fade-in">Der Chatbot begrüßt den Nutzer mit den selben Worten</li>
+<li class="fragment fade-in">Der Chatbot fragt den Nutzer nach seinem Namen und verwendet den Namen fortan</li>
+<li class="fragment fade-in">Der Chatbot stellt einige Ja/Nein-Fragen, die der Nutzer mit "Ja" oder "Nein" beantwortet</li>
+<li class="fragment fade-in">Abhängig von der Antwort des Nutzers, soll der Chatbot die Antwort kommentieren</li>
+<li class="fragment fade-in">Der Chatbot fragt nach dem Alter des Nutzers</li>
+<li class="fragment fade-in">Der Chatbot fragt, wie alt der Nutzer den Chatbot schätzt</li>
+<li class="fragment fade-in">Der Chatbot fragt, wie viele Wochen das gemeinsame Alter geschätzt wäre</li>
+<li class="fragment fade-in">Der Chatbot berechnet das gemeinsame Alter des Nutzers und des Chatbots in Wochen und gibt das Ergebnis aus</li>
+<li class="fragment fade-in">Der Chatbot gibt abhängig davon, ob man richtig, zu niedrig oder zu hoch geschätzt hat, eine entsprechende Antwort aus</li>
+</font>
