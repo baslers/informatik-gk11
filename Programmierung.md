@@ -180,7 +180,7 @@ Definition und Initialisierung:
 | +=                    | Inkrement und Zuweisung      | !                   | nicht          |
 | --                    | Dekrement                    | &&                  | UND            |
 | -=                    | Dekrement und Zuweisung      | \|\|                | ODER           |
-| (...)                 | Klamerung                    |                     |                |
+| (...)                 | Klammerung                   |                     |                |
 |                       |                              |                     |                |
 
 </font>
