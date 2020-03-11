@@ -219,3 +219,102 @@ Aufgabe: Schreibe einen Chatbot, der mit dem Nutzer chattet. Sorge durch sinnvol
 <li class="fragment fade-in">Der Chatbot berechnet das gemeinsame Alter des Nutzers und des Chatbots in Wochen und gibt das Ergebnis aus</li>
 <li class="fragment fade-in">Der Chatbot gibt abhängig davon, ob man richtig, zu niedrig oder zu hoch geschätzt hat, eine entsprechende Antwort aus</li>
 </font>
+
+### Schleifen
+<li class="fragment fade-in">Kontrollstrukturen, um Anweisungs-Blöcke zu wiederholen</li>
+<li class="fragment fade-in">Man unterscheidet:</li>
+<li class="fragment fade-in">Zählschleifen (For-Schleifen)</li>
+<li class="fragment fade-in">Kopfgesteuerte Schleifen (While-Do-Schleifen)</li>
+<li class="fragment fade-in">Fußgesteuerte Schleifen (Do-While-Schleifen)</li>
+<li class="fragment fade-in">Mengenschleifen (Foreach-Schleifen)</li>
+
+### Zählschleifen (For-Schleifen)
+<font size="6">
+    for(INITIALISIERUNG; BEDINGUNG; AKTUALISIERUNG){}
+      ANWEISUNGEN;
+    }
+
+Beispiel:  
+
+    int summeVon0Bis9 = 0;
+    for(int i=0; i<10; i++){
+      summeVon0Bis9 += i;
+    }
+
+<li class="fragment fade-in">Initialsierung: Zählvariable wird initialisiert</li>
+<li class="fragment fade-in">Bedingung: Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist</li>
+<li class="fragment fade-in">Aktualisierung: Zählvariable wird aktualisiert</li>
+</font>
+
+### Kopfgesteuerte Schleifen (While-Do-Schleifen)
+<font size="6">
+    while(BEDINGUNG){
+      ANWEISUNGEN;
+    }
+
+Beispiel:  
+
+    int summeVon0Bis9 = 0;
+    int i = 0;
+    while(i<10){
+      summeVon0Bis9 += i;
+      i++;
+    }
+
+<li class="fragment fade-in">Schleife wird nur durchlaufen, wenn die Bedingung erfüllt ist</li>
+<li class="fragment fade-in">Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist</li>
+<li class="fragment fade-in">Initialisiert wird ggfs. vor der Schleife</li>
+<li class="fragment fade-in">Aktualisiert wird ggfs. innerhalb der Schleife</li>
+</font>
+
+### Fußgesteuerte Schleifen (Do-While-Schleifen)
+<font size="6">
+    do{
+      ANWEISUNGEN;
+    }(BEDINGUNG);
+
+Beispiel:  
+
+    int i = 0;
+    int summeVon0Bis9 = 0;
+    do{
+      summeVon0Bis9 += i;
+      i++;
+    }while(i<10);
+
+<li class="fragment fade-in">Schleife wird mindestens einmal durchlaufen, unabhängig von der Bedingung</li>
+<li class="fragment fade-in">Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist</li>
+<li class="fragment fade-in">Initialsiert wird ggfs. vor der Schleife</li>
+<li class="fragment fade-in">Aktualisiert wird ggfs. innerhalb der Schleife</li>
+</font>
+
+### Mengenschleifen (Foreach-Schleifen)
+<font size="6">
+    for(TYP ELEMENT : KOLLEKTION){
+      ANWEISUNGEN;
+    }
+
+Beispiel:  
+
+    int[] numbers = {0,1,2,3,4,5,6,7,8,9};
+    int summeVon0Bis9 = 0;
+    for(int i : numbers){
+      summeVon0Bis9 += i;
+    }
+
+<li class="fragment fade-in">Schleife wird für jedes Element einer Menge (z.B. Array oder Liste) durchgeführt</li>
+</font>
+
+### Übungsaufgabe Schleifen
+Verwende jeweils die ersten drei Schleifenarten und beschreibe jeweils Vor- und Nachteile.  
+<ol>
+<li class="fragment fade-in">Gib die Zahlen von 1000 bis 0 in der Konsole aus.</li>
+<li class="fragment fade-in">Berechne mithilfe einer Schleife 10! und gib das Ergebnis in der Konsole aus.</li>
+<li class="fragment fade-in">Gib das kleine Einmaleins in der Konsole aus:</li>
+<ul style="list-style-type:none;">
+<li class="fragment fade-in">1 x 1 = 1</li>
+<li class="fragment fade-in">1 x 2 = 2</li>
+<li class="fragment fade-in">...</li>
+<li class="fragment fade-in">10 x 10 = 100</li>
+</ul>
+</ol>
