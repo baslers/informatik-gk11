@@ -408,9 +408,7 @@ die gleiche Matrix erzeugt auch
 
 oder
 
-    int[][] matrix = {{1,2,3,4},
-                      {5,6,7,8},      //Umbrüche nur wegen der Lesbarkeit
-                      {9,10,11,12}}; //Darf auch auf einer Zeile geschrieben werden
+    int[][] matrix = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 
 </font>
 
