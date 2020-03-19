@@ -29,20 +29,6 @@
   <!--[if lt IE 9]>
   <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      fleqn: false
-     });
-  }}});
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -63,7 +49,7 @@ Compiler übersetzt Quelltext in Maschinencode
 Maschinencode ist nur von jeweiligem Betriebssystem ausführbar
 </li>
 <li class="fragment fade-in">
-Beispiel: Quelle.c <span class="math inline">\rightarrow</span> Quelle.exe
+Beispiel: Quelle.c <span class="math inline">\(\rightarrow\)</span> Quelle.exe
 </li>
 Interpretersprachen:<br />
 
@@ -182,12 +168,12 @@ Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere 
 </tr>
 <tr class="even">
 <td>int</td>
-<td><span class="math inline">2\cdot 10^9...2\cdot 10^9</span></td>
+<td><span class="math inline">\(2\cdot 10^9...2\cdot 10^9\)</span></td>
 <td>12345</td>
 </tr>
 <tr class="odd">
 <td>long</td>
-<td><span class="math inline">-10^{19}...10^{19}</span></td>
+<td><span class="math inline">\(-10^{19}...10^{19}\)</span></td>
 <td>123456L</td>
 </tr>
 <tr class="even">
@@ -197,12 +183,12 @@ Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere 
 </tr>
 <tr class="odd">
 <td>float</td>
-<td><span class="math inline">-10^{38}...10^{38}</span></td>
+<td><span class="math inline">\(-10^{38}...10^{38}\)</span></td>
 <td>1.2f</td>
 </tr>
 <tr class="even">
 <td>double</td>
-<td><span class="math inline">-10^{308}...10^{308}</span></td>
+<td><span class="math inline">\(-10^{308}...10^{308}\)</span></td>
 <td>1.2</td>
 </tr>
 <tr class="odd">
@@ -425,7 +411,7 @@ public class Text{
 </tr>
 <tr class="even">
 <td>(…)</td>
-<td>Klamerung</td>
+<td>Klammerung</td>
 <td></td>
 <td></td>
 </tr>
@@ -501,6 +487,252 @@ Der Chatbot gibt abhängig davon, ob man richtig, zu niedrig oder zu hoch gesch�
 </li>
 <p></font></p>
 </section>
+<section id="schleifen" class="slide level3">
+<h3>Schleifen</h3>
+<li class="fragment fade-in">
+Kontrollstrukturen, um Anweisungs-Blöcke zu wiederholen
+</li>
+<li class="fragment fade-in">
+Man unterscheidet:
+</li>
+<li class="fragment fade-in">
+Zählschleifen (For-Schleifen)
+</li>
+<li class="fragment fade-in">
+Kopfgesteuerte Schleifen (While-Do-Schleifen)
+</li>
+<li class="fragment fade-in">
+Fußgesteuerte Schleifen (Do-While-Schleifen)
+</li>
+<li class="fragment fade-in">
+Mengenschleifen (Foreach-Schleifen)
+</li>
+</section>
+<section id="zählschleifen-for-schleifen" class="slide level3">
+<h3>Zählschleifen (For-Schleifen)</h3>
+<p><font size="6"> for(INITIALISIERUNG; BEDINGUNG; AKTUALISIERUNG){} ANWEISUNGEN; }</p>
+<p>Beispiel:</p>
+<pre><code>int summeVon0Bis9 = 0;
+for(int i=0; i&lt;10; i++){
+  summeVon0Bis9 += i;
+}</code></pre>
+<li class="fragment fade-in">
+Initialsierung: Zählvariable wird initialisiert
+</li>
+<li class="fragment fade-in">
+Bedingung: Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist
+</li>
+<li class="fragment fade-in">
+Aktualisierung: Zählvariable wird aktualisiert
+</li>
+<p></font></p>
+</section>
+<section id="kopfgesteuerte-schleifen-while-do-schleifen" class="slide level3">
+<h3>Kopfgesteuerte Schleifen (While-Do-Schleifen)</h3>
+<p><font size="6"> while(BEDINGUNG){ ANWEISUNGEN; }</p>
+<p>Beispiel:</p>
+<pre><code>int summeVon0Bis9 = 0;
+int i = 0;
+while(i&lt;10){
+  summeVon0Bis9 += i;
+  i++;
+}</code></pre>
+<li class="fragment fade-in">
+Schleife wird nur durchlaufen, wenn die Bedingung erfüllt ist
+</li>
+<li class="fragment fade-in">
+Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist
+</li>
+<li class="fragment fade-in">
+Initialisiert wird ggfs. vor der Schleife
+</li>
+<li class="fragment fade-in">
+Aktualisiert wird ggfs. innerhalb der Schleife
+</li>
+<p></font></p>
+</section>
+<section id="fußgesteuerte-schleifen-do-while-schleifen" class="slide level3">
+<h3>Fußgesteuerte Schleifen (Do-While-Schleifen)</h3>
+<p><font size="6"> do{ ANWEISUNGEN; }(BEDINGUNG);</p>
+<p>Beispiel:</p>
+<pre><code>int i = 0;
+int summeVon0Bis9 = 0;
+do{
+  summeVon0Bis9 += i;
+  i++;
+}while(i&lt;10);</code></pre>
+<li class="fragment fade-in">
+Schleife wird mindestens einmal durchlaufen, unabhängig von der Bedingung
+</li>
+<li class="fragment fade-in">
+Schleife wird wiederholt, bis die Bedingung nicht mehr erfüllt ist
+</li>
+<li class="fragment fade-in">
+Initialsiert wird ggfs. vor der Schleife
+</li>
+<li class="fragment fade-in">
+Aktualisiert wird ggfs. innerhalb der Schleife
+</li>
+<p></font></p>
+</section>
+<section id="mengenschleifen-foreach-schleifen" class="slide level3">
+<h3>Mengenschleifen (Foreach-Schleifen)</h3>
+<p><font size="6"> for(TYP ELEMENT : KOLLEKTION){ ANWEISUNGEN; }</p>
+<p>Beispiel:</p>
+<pre><code>int[] numbers = {0,1,2,3,4,5,6,7,8,9};
+int summeVon0Bis9 = 0;
+for(int i : numbers){
+  summeVon0Bis9 += i;
+}</code></pre>
+<li class="fragment fade-in">
+Schleife wird für jedes Element einer Menge (z.B. Array oder Liste) durchgeführt
+</li>
+<p></font></p>
+</section>
+<section id="übungsaufgabe-schleifen" class="slide level3">
+<h3>Übungsaufgabe Schleifen</h3>
+Verwende jeweils die ersten drei Schleifenarten und beschreibe jeweils Vor- und Nachteile.<br />
+
+<ol>
+<li class="fragment fade-in">
+Gib die Zahlen von 1000 bis 0 in der Konsole aus.
+</li>
+<li class="fragment fade-in">
+Berechne mithilfe einer Schleife 10! und gib das Ergebnis in der Konsole aus.
+</li>
+<li class="fragment fade-in">
+Gib das kleine Einmaleins in der Konsole aus:
+</li>
+<ul style="list-style-type:none;">
+<li class="fragment fade-in">
+1 x 1 = 1
+</li>
+<li class="fragment fade-in">
+1 x 2 = 2
+</li>
+<li class="fragment fade-in">
+…
+</li>
+<li class="fragment fade-in">
+10 x 10 = 100
+</li>
+</ul>
+</ol>
+</section>
+<section id="übungsaufgabe-verflixte-sieben" class="slide level3">
+<h3>Übungsaufgabe Verflixte Sieben</h3>
+<p>Ein in der Grundschule und in der Sekundarstufe 1 beliebtes Mathespiel ist die verflixte Sieben.<br />
+Dabei zählt man reihum von 1 beginnend aufwärts, aber lässt jede Zahl aus, die durch die 7 teilbar ist oder die 7 als Ziffer enthält.<br />
+Also: 1,2,3,4,5,6,8,…,13,15,16,18…<br />
+Erstelle ein Programm das auf diese Weise von 1 bis 1000 zählt.<br />
+Dabei ist der Modulo Operator % und die Funktion STRINGVARIABLENNAME.contains(“ZEICHENKETTE, DIE ENTHALTEN SEIN SOLL”) nützlich.</p>
+</section>
+<section id="arrays" class="slide level3">
+<h3>Arrays</h3>
+<li class="fragment fade-in">
+Ein Array (Feld) ist eine Datenstruktur, die mehrere Daten vom selben Typ speichert
+</li>
+<li class="fragment fade-in">
+Der Zugriff erfolgt über Indizes
+</li>
+<span class="fragment fade-in">Beispiel: </span>
+<li class="fragment fade-in">
+Statt name0=“Max”, name1=“Hans”, name2=“Petra” benutzen wir ein Array zum Speichern der Vornamen einer Namensliste
+</li>
+<li class="fragment fade-in">
+Dann ist namen[0]=“Max”, namen[1]=“Hans”, namen[2]=“Petra”
+</li>
+<li class="fragment fade-in">
+Durch den Zugriff durch Indizes ist z.B. der Zugriff auf die Variablen innerhalb von Schleifen deutlich leichter
+</li>
+</section>
+<section id="aufbau-von-arrays" class="slide level3">
+<h3>Aufbau von Arrays</h3>
+<pre><code>DATENTYP[] ARRAYVARIABLENNAME = new DATENTYP[LÄNGEDESARRAYS];</code></pre>
+<p>Die leeren eckigen Klammern dürfen auch hinter dem Arrayvariablennamen stehen:</p>
+<pre><code>DATENTYP ARRAYVARIABLENNAME[] = new DATENTYP[LÄNGEDESARRAYS];</code></pre>
+<p>Der Inhalt des Arrays kann bereits bei der Definition des Arrays initialisiert werden:</p>
+<pre><code>DATENTYP[] ARRAYVARIABLENNAME = {ELEMENT0, ELEMENT1, ..., ELEMENTN};</code></pre>
+</section>
+<section id="array-beispiel-namensliste" class="slide level3">
+<h3>Array Beispiel Namensliste</h3>
+<pre><code>String[] namen = new String[3]; //Array wird deklariert
+namen[0] = &quot;Max&quot;; //Der Inhalt an der Stelle 0 des Arrays wird initialisiert
+namen[1] = &quot;Hans&quot;;
+namen[2] = &quot;Petra&quot;;
+System.out.println(&quot;Der erste Name in der Liste ist &quot; + namen[0]); //Der erste Name wird in der Konsole ausgegeben</code></pre>
+</section>
+<section id="array-beispiel-namensliste-1" class="slide level3">
+<h3>Array Beispiel Namensliste</h3>
+<pre><code>String[] namen = {&quot;Max&quot;, &quot;Hans&quot;, &quot;Petra&quot;}; //Array wird deklariert und sein Inhalt gleichzeitig initialisiert, die Länge ergibt sich damit automatisch
+System.out.println(&quot;Der erste Name in der Liste ist &quot; + namen[0]); //Der erste Name wird in der Konsole ausgegeben</code></pre>
+</section>
+<section id="weitere-beispiele" class="slide level3">
+<h3>Weitere Beispiele</h3>
+<pre><code>boolean[] istMaennlich = new boolean[3];
+istMaennlich[0] = true;
+istMaennlich[1] = true;
+istMaennlich[2] = false;
+int[] alter[] = {16, 17, 16};
+System.out.println(namen[0] + &quot; ist &quot; + alter[0] &quot; Jahre alt.&quot;); //Max ist 16 Jahre alt.
+if(istMaennlich[0]){  //Wenn die erste Person in der Liste männlich ist, wird dies so ausgegeben.
+  System.out.println(namen[0] + &quot; ist männlich.&quot;);
+}else{ //ansonsten wird ausgegeben, dass sie weiblich ist.
+  System.out.println(namen[0] + &quot; ist weiblich.&quot;);
+}</code></pre>
+</section>
+<section id="länge-eines-arrays" class="slide level3">
+<h3>Länge eines Arrays</h3>
+<li class="fragment fade-in">
+Arrays haben immer eine bestimmte Länge
+</li>
+<li class="fragment fade-in">
+Die Länge kann durch ARRAYVARIABLENNAME.length abgerufen werden
+</li>
+<li class="fragment fade-in">
+Zugriff über einen Index, der kleiner als 0 ist oder größer oder gleich der Länge des Arrays ist, führt zu einem Fehler
+</li>
+</section>
+<section id="mehrdimensionale-arrays-matrizen" class="slide level3">
+<h3>Mehrdimensionale Arrays (Matrizen)</h3>
+<li class="fragment fade-in">
+Mit Arrays können auch Matritzen realisiert werden
+</li>
+<li class="fragment fade-in">
+Beispiel: Bilddarstellung an einem Full HD-Monitor, wobei der gespeicherte int-Wert die Farbe codiert, die an dem Pixel dargestellt wird, der durch die Indizes beschrieben wird
+</li>
+<li class="fragment fade-in">
+int[][] bild = new int[1080][1920]
+</li>
+</section>
+<section id="beispiel-mehrdimensionale-arrays" class="slide level3">
+<h3>Beispiel Mehrdimensionale Arrays</h3>
+<pre><code>int[][] matrix = new int[3][4];
+matrix[0][0] = 1;
+matrix[0][1] = 2;
+...
+matrix[2][3] = 12;</code></pre>
+<p>die gleiche Matrix erzeugt auch</p>
+<pre><code>int[][] matrix = new int[3][4];
+int[] zeile0 = {1,2,3,4};
+int[] zeile1 = {5,6,7,8};
+int[] zeile2 = {9,10,11,12};
+matrix[0] = zeile0;
+matrix[1] = zeile1;
+matrix[2] = zeile2;</code></pre>
+<p>oder</p>
+<pre><code>int[][] matrix = {{1,2,3,4},
+                  {5,6,7,8},      //Umbrüche nur wegen der Lesbarkeit
+                  {9,10,11,12}}; //Darf auch auf einer Zeile geschrieben werden</code></pre>
+</section>
+<section id="übungsaufgabe-prinzahlenfinder" class="slide level3">
+<h3>Übungsaufgabe Prinzahlenfinder</h3>
+<p>Eine Primzahl ist eine natürliche Zahl, die durch genau zwei verschiedene natürliche Zahlen teilbar ist. Anders ausgedrückt ist eine Primzahl eine natürliche Zahl, die nur durch sich selbst und die Zahl 1 teilbar ist, mit Außnahme der 1 selbst.<br />
+1. Schreibe ein Programm, das die ersten 100 Primzahlen findet, in einem Array speichert und das Array am Ende ausgibt.<br />
+Um zu ermitteln, ob eine natürliche Zahl x eine Primzahl ist, kann man x durch jede natürliche Zahl kleiner als x teilen und überprüfen, ob ein Rest übrig bleibt.<br />
+Dabei kann der Modulo-Operator % nützlich sein, der den Rest zurückgibt der beim Teilen von zwei Zahlen übrig bleibt.<br />
+2. Finde und implementiere einen Algorithmus, der effizienter arbeitet, als der eben beschriebene Algorithmus, indem nicht jede kleinere Zahl als x überprüft wird, sondern nur die nötigen.</p>
+</section>
     </div>
   </div>
 
@@ -513,11 +745,28 @@ Der Chatbot gibt abhängig davon, ob man richtig, zu niedrig oder zu hoch gesch�
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/math/math.js', async: true },
           { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
         ]
       });

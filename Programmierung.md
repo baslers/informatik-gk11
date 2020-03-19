@@ -318,3 +318,107 @@ Verwende jeweils die ersten drei Schleifenarten und beschreibe jeweils Vor- und 
 <li class="fragment fade-in">10 x 10 = 100</li>
 </ul>
 </ol>
+
+### Übungsaufgabe Verflixte Sieben
+<font size="6">
+Ein in der Grundschule und in der Sekundarstufe 1 beliebtes Mathespiel ist die verflixte Sieben.  
+Dabei zählt man reihum von 1 beginnend aufwärts, aber lässt jede Zahl aus, die durch die 7 teilbar ist oder die 7 als Ziffer enthält.  
+Also: 1,2,3,4,5,6,8,...,13,15,16,18...  
+Erstelle ein Programm das auf diese Weise von 1 bis 1000 zählt.  
+Dabei ist der Modulo Operator % und die Funktion STRINGVARIABLENNAME.contains("ZEICHENKETTE, DIE ENTHALTEN SEIN SOLL") nützlich.
+</font>
+
+### Arrays
+<font size="6">
+<li class="fragment fade-in">Ein Array (Feld) ist eine Datenstruktur, die mehrere Daten vom selben Typ speichert</li>
+<li class="fragment fade-in">Der Zugriff erfolgt über Indizes</li>
+<span class="fragment fade-in">Beispiel:  </span>
+<li class="fragment fade-in">Statt name0="Max", name1="Hans", name2="Petra" benutzen wir ein Array zum Speichern der Vornamen einer Namensliste</li>
+<li class="fragment fade-in">Dann ist namen[0]="Max", namen[1]="Hans", namen[2]="Petra"</li>
+<li class="fragment fade-in">Durch den Zugriff durch Indizes ist z.B. der Zugriff auf die Variablen innerhalb von Schleifen deutlich leichter</li>
+</font>
+
+### Aufbau von Arrays
+
+    DATENTYP[] ARRAYVARIABLENNAME = new DATENTYP[LÄNGEDESARRAYS];
+
+Die leeren eckigen Klammern dürfen auch hinter dem Arrayvariablennamen stehen:
+
+    DATENTYP ARRAYVARIABLENNAME[] = new DATENTYP[LÄNGEDESARRAYS];
+
+Der Inhalt des Arrays kann bereits bei der Definition des Arrays initialisiert werden:
+
+    DATENTYP[] ARRAYVARIABLENNAME = {ELEMENT0, ELEMENT1, ..., ELEMENTN};
+
+### Array Beispiel Namensliste
+
+    String[] namen = new String[3]; //Array wird deklariert
+    namen[0] = "Max"; //Der Inhalt an der Stelle 0 des Arrays wird initialisiert
+    namen[1] = "Hans";
+    namen[2] = "Petra";
+    System.out.println("Der erste Name in der Liste ist " + namen[0]); //Der erste Name wird in der Konsole ausgegeben
+
+### Array Beispiel Namensliste
+
+    String[] namen = {"Max", "Hans", "Petra"}; //Array wird deklariert und sein Inhalt gleichzeitig initialisiert, die Länge ergibt sich damit automatisch
+    System.out.println("Der erste Name in der Liste ist " + namen[0]); //Der erste Name wird in der Konsole ausgegeben
+
+### Weitere Beispiele
+
+    boolean[] istMaennlich = new boolean[3];
+    istMaennlich[0] = true;
+    istMaennlich[1] = true;
+    istMaennlich[2] = false;
+    int[] alter[] = {16, 17, 16};
+    System.out.println(namen[0] + " ist " + alter[0] " Jahre alt."); //Max ist 16 Jahre alt.
+    if(istMaennlich[0]){  //Wenn die erste Person in der Liste männlich ist, wird dies so ausgegeben.
+      System.out.println(namen[0] + " ist männlich.");
+    }else{ //ansonsten wird ausgegeben, dass sie weiblich ist.
+      System.out.println(namen[0] + " ist weiblich.");
+    }
+
+### Länge eines Arrays
+<li class="fragment fade-in">Arrays haben immer eine bestimmte Länge</li>
+<li class="fragment fade-in">Die Länge kann durch ARRAYVARIABLENNAME.length abgerufen werden</li>
+<li class="fragment fade-in">Zugriff über einen Index, der kleiner als 0 ist oder größer oder gleich der Länge des Arrays ist, führt zu einem Fehler</li>
+
+### Mehrdimensionale Arrays (Matrizen)
+<li class="fragment fade-in">Mit Arrays können auch Matritzen realisiert werden</li>
+<li class="fragment fade-in">Beispiel: Bilddarstellung an einem Full HD-Monitor, wobei der gespeicherte int-Wert die Farbe codiert, die an dem Pixel dargestellt wird, der durch die Indizes beschrieben wird</li>
+<li class="fragment fade-in">int[][] bild = new int[1080][1920]</li>
+
+### Beispiel Mehrdimensionale Arrays
+<font size="6">
+
+    int[][] matrix = new int[3][4];
+    matrix[0][0] = 1;
+    matrix[0][1] = 2;
+    ...
+    matrix[2][3] = 12;
+
+die gleiche Matrix erzeugt auch
+
+    int[][] matrix = new int[3][4];
+    int[] zeile0 = {1,2,3,4};
+    int[] zeile1 = {5,6,7,8};
+    int[] zeile2 = {9,10,11,12};
+    matrix[0] = zeile0;
+    matrix[1] = zeile1;
+    matrix[2] = zeile2;
+
+oder
+
+    int[][] matrix = {{1,2,3,4},
+                      {5,6,7,8},      //Umbrüche nur wegen der Lesbarkeit
+                      {9,10,11,12}}; //Darf auch auf einer Zeile geschrieben werden
+
+</font>
+
+### Übungsaufgabe Primzahlenfinder
+<font size="6"><p style="line-height: 100%">
+Eine Primzahl ist eine natürliche Zahl, die durch genau zwei verschiedene natürliche Zahlen teilbar ist. Anders ausgedrückt ist eine Primzahl eine natürliche Zahl, die nur durch sich selbst und die Zahl 1 teilbar ist, mit Außnahme der 1 selbst.  
+1. Schreibe ein Programm, das die ersten 100 Primzahlen findet, in einem Array speichert und das Array am Ende ausgibt.  
+Um zu ermitteln, ob eine natürliche Zahl x eine Primzahl ist, kann man x durch jede natürliche Zahl kleiner als x teilen und überprüfen, ob ein Rest übrig bleibt.  
+Dabei kann der Modulo-Operator % nützlich sein, der den Rest zurückgibt der beim Teilen von zwei Zahlen übrig bleibt.  
+2. Finde und implementiere einen Algorithmus, der effizienter arbeitet, als der eben beschriebene Algorithmus, indem nicht jede kleinere Zahl als x überprüft wird, sondern nur die nötigen.
+</p></font>
