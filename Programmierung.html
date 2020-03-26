@@ -29,6 +29,20 @@
   <!--[if lt IE 9]>
   <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
   <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
 </head>
 <body>
   <div class="reveal">
@@ -49,7 +63,7 @@ Compiler übersetzt Quelltext in Maschinencode
 Maschinencode ist nur von jeweiligem Betriebssystem ausführbar
 </li>
 <li class="fragment fade-in">
-Beispiel: Quelle.c <span class="math inline">\(\rightarrow\)</span> Quelle.exe
+Beispiel: Quelle.c <span class="math inline">\rightarrow</span> Quelle.exe
 </li>
 Interpretersprachen:<br />
 
@@ -168,12 +182,12 @@ Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere 
 </tr>
 <tr class="even">
 <td>int</td>
-<td><span class="math inline">\(2\cdot 10^9...2\cdot 10^9\)</span></td>
+<td><span class="math inline">2\cdot 10^9...2\cdot 10^9</span></td>
 <td>12345</td>
 </tr>
 <tr class="odd">
 <td>long</td>
-<td><span class="math inline">\(-10^{19}...10^{19}\)</span></td>
+<td><span class="math inline">-10^{19}...10^{19}</span></td>
 <td>123456L</td>
 </tr>
 <tr class="even">
@@ -183,12 +197,12 @@ Konventionell beginnen Klassennamen mit einem Großbuchstaben und jedes weitere 
 </tr>
 <tr class="odd">
 <td>float</td>
-<td><span class="math inline">\(-10^{38}...10^{38}\)</span></td>
+<td><span class="math inline">-10^{38}...10^{38}</span></td>
 <td>1.2f</td>
 </tr>
 <tr class="even">
 <td>double</td>
-<td><span class="math inline">\(-10^{308}...10^{308}\)</span></td>
+<td><span class="math inline">-10^{308}...10^{308}</span></td>
 <td>1.2</td>
 </tr>
 <tr class="odd">
@@ -675,7 +689,7 @@ System.out.println(&quot;Der erste Name in der Liste ist &quot; + namen[0]); //D
 istMaennlich[0] = true;
 istMaennlich[1] = true;
 istMaennlich[2] = false;
-int[] alter[] = {16, 17, 16};
+int[] alter = {16, 17, 16};
 System.out.println(namen[0] + &quot; ist &quot; + alter[0] &quot; Jahre alt.&quot;); //Max ist 16 Jahre alt.
 if(istMaennlich[0]){  //Wenn die erste Person in der Liste männlich ist, wird dies so ausgegeben.
   System.out.println(namen[0] + &quot; ist männlich.&quot;);
@@ -751,28 +765,11 @@ Dabei kann der Modulo-Operator % nützlich sein, der den Rest zurückgibt der be
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
-          { src: 'https://revealjs.com/plugin/math/math.js', async: true },
           { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
         ]
       });

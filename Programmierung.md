@@ -369,7 +369,7 @@ Der Inhalt des Arrays kann bereits bei der Definition des Arrays initialisiert w
     istMaennlich[0] = true;
     istMaennlich[1] = true;
     istMaennlich[2] = false;
-    int[] alter[] = {16, 17, 16};
+    int[] alter = {16, 17, 16};
     System.out.println(namen[0] + " ist " + alter[0] " Jahre alt."); //Max ist 16 Jahre alt.
     if(istMaennlich[0]){  //Wenn die erste Person in der Liste männlich ist, wird dies so ausgegeben.
       System.out.println(namen[0] + " ist männlich.");
