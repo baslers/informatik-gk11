@@ -753,6 +753,147 @@ Dabei kann der Modulo-Operator % nützlich sein, der den Rest zurückgibt der be
 </p>
 <p></font></p>
 </section>
+<section id="motivation-für-methoden" class="slide level3">
+<h3>Motivation für Methoden</h3>
+<ul>
+<li>Methoden helfen, das Programm übersichtlicher zu machen</li>
+<li>Methoden helfen, Code wiederzuverwenden</li>
+<li>Methoden helfen, Programmierarbeit aufzuteilen</li>
+</ul>
+</section>
+<section id="verwendung-von-methoden" class="slide level3">
+<h3>Verwendung von Methoden</h3>
+<ul style="font-size:xx-large">
+<li>
+Methoden können einen direkten Effekt haben, aber kein Ergebnis liefern (Schlüsselwort void), z.B. gibt System.out.println(“Hallo”) Text aus, aber liefert kein Ergebnis
+</li>
+<li>
+Methoden können keinen direkten Effekt haben, aber ein Ergebnis liefern, z.B. kann eine Methode add(a,b) keinen Effekt haben, aber das Ergebnis a+b liefern
+</li>
+<li>
+Methoden können einen direkten Effekt haben und ein Ergebnis liefern, z.B. könnte eine Methode print(array) das Array ausgeben und als Ergebnis in einem Boolean liefern, ob das Array leer war oder tatsächlich etwas ausgegeben werden konnte
+</li>
+</ul>
+</section>
+<section id="aufbau-von-methoden" class="slide level3">
+<h3>Aufbau von Methoden</h3>
+<pre><code>public static RÜCKGABETYP METHODENNAME(PARAMETER){
+  ANWEISUNGEN;
+  return RÜCKGABEWERT;
+}</code></pre>
+<ul style="font-size:x-large">
+<li>
+Der Rückgabetyp ist der Datentyp des Ergebnisses (z.B. int, boolean, double, String)
+</li>
+<li>
+Gibt die Methode kein Ergebnis zurück, ist der Rückgabetyp void
+</li>
+<li>
+Der Methodenname ist ein beliebiger Name der Methode, der die Konventionen erfüllt (kleiner Anfangsbuchstabe, CamelCase)
+</li>
+<li>
+Es können beliebig viele Parameter (Variablen, die beim Aufruf übergeben werden) verwendet werden, die mit Kommas getrennt sind
+</li>
+<li>
+Der Datentyp muss vor dem Parameternamen angegeben werden
+</li>
+<li>
+Es können beliebig viele Anweisungen im Codeblock folgen
+</li>
+<li>
+return beendet die Methode und gibt den Rückgabewert als Ergebnis zurück
+</li>
+<li>
+Bei Methoden ohne Ergebnis muss kein return angegeben werden
+</li>
+</ul>
+</section>
+<section id="platzierung-von-methodendefinitionen" class="slide level3">
+<h3>Platzierung von Methodendefinitionen</h3>
+<pre><code>public class KLASSENNAME{
+  public static void main(String[] args){
+    ANEISUNGEN;
+  }
+  
+  public static RÜCKGABETYP METHODENNAME(PARAMETER){
+    ANWEISUNGEN;
+  }
+}</code></pre>
+<ul>
+<li>Die Methode wird innerhalb des Klassenblocks, aber außerhalb der main-Methode (und anderen Methoden) definiert</li>
+</ul>
+</section>
+<section id="beispiel-methode-mit-rückgabe" class="slide level3">
+<h3>Beispiel Methode mit Rückgabe</h3>
+<pre><code>public class Rechteck{
+  public static void main(String[] args){
+    int a = 5;
+    int b = 7;
+    int flaecheninhalt = berechneFlaecheninhalt(a, b);
+    System.out.println(&quot;Berechnete Fläche: &quot;+flaecheninhalt);
+  }
+  
+  public static int berechneFlaecheninhalt(int x, int y){
+    return x*y;
+  }
+}</code></pre>
+</section>
+<section id="beispiel-methode-ohne-rückgabe" class="slide level3">
+<h3>Beispiel Methode ohne Rückgabe</h3>
+<pre><code>public class Hallo{
+  public static void main(String[] args){
+    String name = &quot;Basler&quot;;
+    sagHallo(name);
+  }
+  
+  public static void sagHallo(String name){
+    System.out.println(&quot;Hallo Herr &quot;+name);
+  }
+}</code></pre>
+</section>
+<section id="übungsaufgaben" class="slide level3">
+<h3>Übungsaufgaben</h3>
+<p>Kopiere den folgenden Quelltext und beende die TODOs so, dass ein lauffähiges Programm mit den gewünschten Ergebnissen entsteht.</p>
+<pre><code>public class Mathe{
+  public static void main(String[] args){
+    int x = 3;
+    int y = 5;
+    int z = 7;
+    //TODO printSolutions wird mit x und y aufgerufen
+    int addition = //TODO add wird mit x, y und z aufgerufen
+    //TODO addition wird in der Konsole ausgegeben
+  }
+  
+  //die Funktion add wird definiert
+  //add hat zwei int Parameter
+  public static int add(int a, int b){
+    //TODO add gibt die Addition der Parameter zurück
+  }
+  
+  //TODO eine weitere Funktion add wird definiert (gleicher Name wie zuvor, aber drei Parameter)
+  //add hat drei int PARAMETER
+  //add gibt die Addition der drei Parameter zurück, aber nutzt dafür nicht +, sondern die oben bereits definierte add Funktion
+  
+  //TODO die Funktion mult wird definiert
+  //mult hat zwei int Paramter
+  //mult gibt die Multiplikation der Parameter zurück
+  
+  //TODO sub wird definiert
+  //sub hat zwei int Parameter
+  //sub gibt die Subtraktion der beiden Parameter zurück
+  
+  //TODO mod wird definiert
+  //mod hat zwei int Parameter
+  //mod gibt den Modulo der beiden Paramter zurück
+  
+  
+  //TODO printSolutions wird definiert
+  //printSolutions hat zwei int Parameter
+  //printSolutions gibt die Ergebnisse aus add, sub, mult und mod der beiden Parameter durch Kommas getrennt auf der Konsole aus
+  //z.B. wäre die Ausgabe für printSolutions(1,1) auf der Konsole &quot;2,0,1,0&quot;
+  //printSolutions hat nur diesen Effekt, aber kein eigenes Ergebnis, das zurückgegeben wird
+}</code></pre>
+</section>
     </div>
   </div>
 

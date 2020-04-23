@@ -420,3 +420,114 @@ Um zu ermitteln, ob eine natürliche Zahl x eine Primzahl ist, kann man x durch 
 Dabei kann der Modulo-Operator % nützlich sein, der den Rest zurückgibt der beim Teilen von zwei Zahlen übrig bleibt.  
 2. Finde und implementiere einen Algorithmus, der effizienter arbeitet, als der eben beschriebene Algorithmus, indem nicht jede kleinere Zahl als x überprüft wird, sondern nur die nötigen.
 </p></font>
+
+### Motivation für Methoden
+- Methoden helfen, das Programm übersichtlicher zu machen
+- Methoden helfen, Code wiederzuverwenden
+- Methoden helfen, Programmierarbeit aufzuteilen
+
+### Verwendung von Methoden
+
+<ul style="font-size:xx-large">
+<li>Methoden können einen direkten Effekt haben, aber kein Ergebnis liefern (Schlüsselwort void), z.B. gibt System.out.println("Hallo") Text aus, aber liefert kein Ergebnis</li>
+<li>Methoden können keinen direkten Effekt haben, aber ein Ergebnis liefern, z.B. kann eine Methode add(a,b) keinen Effekt haben, aber das Ergebnis a+b liefern</li>
+<li>Methoden können einen direkten Effekt haben und ein Ergebnis liefern, z.B. könnte eine Methode print(array) das Array ausgeben und als Ergebnis in einem Boolean liefern, ob das Array leer war oder tatsächlich etwas ausgegeben werden konnte</li>
+</ul>
+
+### Aufbau von Methoden 
+    public static RÜCKGABETYP METHODENNAME(PARAMETER){
+      ANWEISUNGEN;
+      return RÜCKGABEWERT;
+    }
+    
+<ul style="font-size:x-large">
+<li>Der Rückgabetyp ist der Datentyp des Ergebnisses (z.B. int, boolean, double, String)</li>
+<li>Gibt die Methode kein Ergebnis zurück, ist der Rückgabetyp void</li>
+<li>Der Methodenname ist ein beliebiger Name der Methode, der die Konventionen erfüllt (kleiner Anfangsbuchstabe, CamelCase)</li>
+<li>Es können beliebig viele Parameter (Variablen, die beim Aufruf übergeben werden) verwendet werden, die mit Kommas getrennt sind</li>
+<li>Der Datentyp muss vor dem Parameternamen angegeben werden</li>
+<li>Es können beliebig viele Anweisungen im Codeblock folgen</li>
+<li>return beendet die Methode und gibt den Rückgabewert als Ergebnis zurück</li>
+<li>Bei Methoden ohne Ergebnis muss kein return angegeben werden</li>
+</ul>
+
+### Platzierung von Methodendefinitionen
+    public class KLASSENNAME{
+      public static void main(String[] args){
+        ANEISUNGEN;
+      }
+      
+      public static RÜCKGABETYP METHODENNAME(PARAMETER){
+        ANWEISUNGEN;
+      }
+    }
+- Die Methode wird innerhalb des Klassenblocks, aber außerhalb der main-Methode (und anderen Methoden) definiert
+
+### Beispiel Methode mit Rückgabe
+    public class Rechteck{
+      public static void main(String[] args){
+        int a = 5;
+        int b = 7;
+        int flaecheninhalt = berechneFlaecheninhalt(a, b);
+        System.out.println("Berechnete Fläche: "+flaecheninhalt);
+      }
+      
+      public static int berechneFlaecheninhalt(int x, int y){
+        return x*y;
+      }
+    }
+    
+### Beispiel Methode ohne Rückgabe
+    public class Hallo{
+      public static void main(String[] args){
+        String name = "Basler";
+        sagHallo(name);
+      }
+      
+      public static void sagHallo(String name){
+        System.out.println("Hallo Herr "+name);
+      }
+    }
+
+### Übungsaufgaben
+Kopiere den folgenden Quelltext und beende die TODOs so, dass ein lauffähiges Programm mit den gewünschten Ergebnissen entsteht.
+
+    public class Mathe{
+      public static void main(String[] args){
+        int x = 3;
+        int y = 5;
+        int z = 7;
+        //TODO printSolutions wird mit x und y aufgerufen
+        int addition = //TODO add wird mit x, y und z aufgerufen
+        //TODO addition wird in der Konsole ausgegeben
+      }
+      
+      //die Funktion add wird definiert
+      //add hat zwei int Parameter
+      public static int add(int a, int b){
+        //TODO add gibt die Addition der Parameter zurück
+      }
+      
+      //TODO eine weitere Funktion add wird definiert (gleicher Name wie zuvor, aber drei Parameter)
+      //add hat drei int PARAMETER
+      //add gibt die Addition der drei Parameter zurück, aber nutzt dafür nicht +, sondern die oben bereits definierte add Funktion
+      
+      //TODO die Funktion mult wird definiert
+      //mult hat zwei int Paramter
+      //mult gibt die Multiplikation der Parameter zurück
+      
+      //TODO sub wird definiert
+      //sub hat zwei int Parameter
+      //sub gibt die Subtraktion der beiden Parameter zurück
+      
+      //TODO mod wird definiert
+      //mod hat zwei int Parameter
+      //mod gibt den Modulo der beiden Paramter zurück
+      
+      
+      //TODO printSolutions wird definiert
+      //printSolutions hat zwei int Parameter
+      //printSolutions gibt die Ergebnisse aus add, sub, mult und mod der beiden Parameter durch Kommas getrennt auf der Konsole aus
+      //z.B. wäre die Ausgabe für printSolutions(1,1) auf der Konsole "2,0,1,0"
+      //printSolutions hat nur diesen Effekt, aber kein eigenes Ergebnis, das zurückgegeben wird
+    }
