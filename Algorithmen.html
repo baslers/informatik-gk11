@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Algorithmen</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <style> .beispiel { border:3px; border-style:solid; border-color:black; width:fit-content; margin:auto; } .wichtig { border:3px; border-style:solid; border-color:red; width:fit-content; margin:auto; } </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Algorithmen</h1>
+</section>
+
+<section id="definition-algorithmus" class="slide level3">
+<h3>Definition: Algorithmus</h3>
+<p>Ein <strong>Algorithmus</strong> ist eine <em>endliche</em>, <em>eindeutige</em>, <em>ausführbare</em> und <em>allgemeingültige</em> Verarbeitungsvorschrift.</p>
+</section>
+<section id="endlichkeit" class="slide level3">
+<h3>Endlichkeit</h3>
+<p>Ein Algorithmus besteht aus endlich vielen Anweisungen (<strong>Finitheit</strong>) und darf zur Ausführung nur endlich viele Schritte benötigen (<strong>Terminiertheit</strong>).</p>
+</section>
+<section id="eindeutigkeit" class="slide level3">
+<h3>Eindeutigkeit</h3>
+<p>An jeder Stelle des Algorithmus ist der nächste Schritt eindeutig definiert (<strong>Determinismus</strong>). Daraus folgt, dass gleiche Eingaben bei wiederholter Ausführung des Algorithmus zu gleichen Ausgaben führen (<strong>Determiniertheit</strong>).</p>
+</section>
+<section id="ausführbarkeit" class="slide level3">
+<h3>Ausführbarkeit</h3>
+<p>Jede Anweisung des Algorithmus muss für den “Prozessor” verständlich und ausführbar sein.</p>
+</section>
+<section id="allgemeingültigkeit" class="slide level3">
+<h3>Allgemeingültigkeit</h3>
+<p>Ein Algorithmus löst nicht nur einen Spezialfall, sondern eine ganze Klasse gleichartiger Probleme.</p>
+</section>
+<section id="beispiel-euklidischer-algorithmus" class="slide level3">
+<h3>Beispiel: Euklidischer Algorithmus</h3>
+<pre><code>euclid(a, b)
+  wenn a = 0 dann
+    Ergebnis = b
+  sonst
+    solange b != 0
+      wenn a &gt; b dann
+        a = a - b
+      sonst
+        b = b - a
+      //
+    //
+  Ergebnis = a</code></pre>
+<ol type="1">
+<li>Aufgabe: Führe den Algorithmus euclid(44, 12) durch. Was berechnet der euklidische Algorithmus?</li>
+<li>Aufgabe: Implementiere den Algorithmus.</li>
+</ol>
+</section>
+<section id="aufgabe-schaltjahr" class="slide level3">
+<h3>Aufgabe: Schaltjahr</h3>
+<p>Regeln eines Schaltjahres:</p>
+<ol type="1">
+<li>Ist ein Jahr durch 4 ganzzahlig teilbar, ist es ein Schaltjahr.<br />
+</li>
+<li>Ist ein Jahr durch 100 teilbar, ist es trotz Regel 1 <em>kein</em> Schaltjahr.<br />
+</li>
+<li>Ist ein Jahr durch 400 teilbar, ist es trotz Regel 2 ein Schaltjahr.</li>
+</ol>
+<p>Aufgabe: Entwickle und implementiere einen Algorithmus, der für ein gegebenes Jahr bestimmt, ob es sich um ein Schaltjahr handelt.<br />
+Input: int<br />
+Output: boolean</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: "95%",
+        height: "95%",
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
