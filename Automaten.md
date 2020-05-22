@@ -1,9 +1,27 @@
 % Automaten
 
 ---
-revealjs-url: ../reveal.js
-width: \"100%\"
-height: \"100%\"
+revealjs-url: ../../reveal.js
+theme: white
+width: \"95%\"
+height: \"95%\"
+header-includes:
+    <style>
+    .beispiel {
+      border:3px;
+      border-style:solid;
+      border-color:black;
+      width:fit-content;
+      margin:auto;
+    }
+    .wichtig {
+      border:3px;
+      border-style:solid;
+      border-color:red;
+      width:fit-content;
+      margin:auto;
+    }
+    </style>
 ...
 
 ## Automaten im Alltag

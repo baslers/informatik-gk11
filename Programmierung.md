@@ -1,8 +1,27 @@
 % Einführung in die Programmierung
 
 ---
-revealjs-url: https://revealjs.com
+revealjs-url: ../../reveal.js
 theme: white
+width: \"95%\"
+height: \"95%\"
+header-includes:
+    <style>
+    .beispiel {
+      border:3px;
+      border-style:solid;
+      border-color:black;
+      width:fit-content;
+      margin:auto;
+    }
+    .wichtig {
+      border:3px;
+      border-style:solid;
+      border-color:red;
+      width:fit-content;
+      margin:auto;
+    }
+    </style>
 ...
 
 ### Compilersprachen vs Interpretersprachen

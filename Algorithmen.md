@@ -1,7 +1,7 @@
 % Algorithmen
 
 ---
-revealjs-url: https://revealjs.com
+revealjs-url: ../../reveal.js
 theme: white
 width: \"95%\"
 height: \"95%\"
