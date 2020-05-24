@@ -22,7 +22,7 @@ header-includes:
       margin:auto;
     }
     .footnotes {
-      font-size:0.7em;
+      font-size:0.8em;
     }
     </style>
 ...
