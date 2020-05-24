@@ -59,7 +59,7 @@ bubbleSort2(Array A)
 ^[Seite „Bubblesort“. In: Wikipedia, Die freie Enzyklopädie. Bearbeitungsstand: 29. Januar 2020, 08:56 UTC. URL: <https://de.wikipedia.org/w/index.php?title=Bubblesort&oldid=196297595> (Abgerufen: 23. Mai 2020, 15:26 UTC)]
 
 ### Bubblesort Beispiel
-<img src=".\Abbildungen\Bubblesort.gif" style="max-width:100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" style="max-width:100%">
 
 ^[By Swfung8 - Own work, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=14953478>]
 
@@ -84,7 +84,7 @@ prozedur ende
 ^[Seite „Selectionsort“. In: Wikipedia, Die freie Enzyklopädie. Bearbeitungsstand: 22. März 2020, 16:47 UTC. URL: <https://de.wikipedia.org/w/index.php?title=Selectionsort&oldid=198005065> (Abgerufen: 23. Mai 2020, 15:27 UTC)]
 
 ### Selectionsort Beispiel
-<img src=".\Abbildungen\Selectionsort.gif" style="max-width:100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Selsort_de_0.gif" style="max-width:100%">
 
 ^[By NullKomma00 - Own work, Public Domain, <https://commons.wikimedia.org/w/index.php?curid=9821204>]
 
@@ -117,7 +117,7 @@ funktion merge(linkeListe, rechteListe);
 ^[Seite „Mergesort“. In: Wikipedia, Die freie Enzyklopädie. Bearbeitungsstand: 20. März 2020, 22:53 UTC. URL: <https://de.wikipedia.org/w/index.php?title=Mergesort&oldid=197948614> (Abgerufen: 23. Mai 2020, 15:31 UTC)]
 
 ### Mergesort Beispiel
-<img src=".\Abbildungen\Mergesort.png" style="max-width:100%">
+<img src="https://upload.wikimedia.org/wikipedia/de/9/99/Mergesort_example.png" style="max-width:90%">
 
 ^[Von --Jkrieger 9. Jul 2005 16:01 (CEST) - selbst gezeichnet, Bild-frei, <https://de.wikipedia.org/w/index.php?curid=793375>]
 
@@ -138,6 +138,6 @@ INSERTIONSORT(A)
 ^[Seite „Insertionsort“. In: Wikipedia, Die freie Enzyklopädie. Bearbeitungsstand: 28. Februar 2020, 08:58 UTC. URL: <https://de.wikipedia.org/w/index.php?title=Insertionsort&oldid=197248100> (Abgerufen: 23. Mai 2020, 15:34 UTC)]
 
 ### Insertionsort Beispiel
-<img src=".\Abbildungen\Insertionsort.gif" style="max-width:200%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" style="max-width:200%">
 
 ^[By Swfung8 - Own work, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=14961606>]
