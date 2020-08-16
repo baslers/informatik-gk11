@@ -149,8 +149,8 @@ $$
 
 | Positive Binärzahl | Negative Binärzahl |
 | ------------------ | ------------------ |
-| $0010\hat{=}2$     | $1101\hat{=}-2     |
-| $0000\hat{=}0$     | $0000\hat{=}-0$    |
+| $0010\hat{=}2$     | $1101\hat{=}-2$    |
+| $0000\hat{=}0$     | $1111\hat{=}-0$    |
 |                    |                    |
 
 ### Vorteil des Einerkomplements
@@ -198,3 +198,33 @@ $$
 - Bitlänge ist vorher festgelegt
 - Ergebnisse müssen durch die Bitlänge darstellbar sein
 - Betragsmäßiger Zahlenbereich ist kleiner als bei vorzeichenlosen Zahlen (z.B. -8 bis +7 statt 0 bis 15)
+
+### Hexadezimalzahlen
+- Hexadezimalzahlen haben 16 Symbole zur Darstellung einer Ziffer (0-9, A-F)
+- n Stellen können im Hexadezimalsystem somit $16^n$ Zahlen darstellen
+- Vier Stellen einer Binärzahl ($2^4$) ergeben genau eine Stelle einer Hexadezimalzahl ($16^1$)
+- Binärzahlen können dadurch in Viererblöcken leicht in Hexadezimalzahlen umgewandelt werden
+- Vorteil: Hexadezimalzahlen sind deutlich lesbarer als Binärzahlen
+
+### Hexadezimalzahlen in Binärzahlen
+
+|                 | $16^3=(2^4)^3$ | $16^2=(2^4)^2$ | $16^3=(2^4)^1$ | $16^3=(2^4)^0$ |
+| --------------- | -------------- | -------------- | -------------- | -------------- |
+| Binärzahl       | 1101           | 1111           | 1000           | 0101           |
+| Dezimalzahl     | 13             | 15             | 8              | 5              |
+| Hexadezimalzahl | D              | F              | 8              | 5              |
+|                 |                |                |                |                |
+
+<font size="5">
+$$1101111110000101\hat{=}DF85\hat{=}13\cdot 16^3+15\cdot 16^2+8\cdot 16^1+5\cdot 16^0=57221$$
+</font>
+
+### Übungen Hexadezimalzahlen
+1. Gib die folgenden Hexadezimalzahlen als Binär- und Dezimalzahlen an: a) E9A7 b) 6BC4
+2. Gib die folgende Binärzahl als Hexadezimalzahl an:  
+1101 0010 1010 0101
+
+### Lösungen Hexadezimalzahlen
+1.a) 1110 1001 1010 0111  
+b) 0110 1011 1100 0100  
+2. D2A5
