@@ -191,14 +191,14 @@ Definition und Initialisierung:
 | Numerische Operatoren |                              | Logische Operatoren |                |
 | --------------------- | ---------------------------- | ------------------- | -------------- |
 | +                     | Addition                     | ==                  | Gleichheit     |
-| -                     | Subtraktion                  | !=                  | Ungleichheit   |
+| --                    | Subtraktion                  | !=                  | Ungleichheit   |
 | *                     | Multiplikation               | <                   | kleiner als    |
 | /                     | Division                     | <=                  | kleiner gleich |
 | %                     | Modulo (Rest einer Division) | >                   | größer als     |
 | ++                    | Inkrement                    | >=                  | größer gleich  |
 | +=                    | Inkrement und Zuweisung      | !                   | nicht          |
-| --                    | Dekrement                    | &&                  | UND            |
-| -=                    | Dekrement und Zuweisung      | \|\|                | ODER           |
+| -- --                 | Dekrement                    | &&                  | UND            |
+| --=                   | Dekrement und Zuweisung      | \|\|                | ODER           |
 | (...)                 | Klammerung                   |                     |                |
 |                       |                              |                     |                |
 
