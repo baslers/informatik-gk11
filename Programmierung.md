@@ -89,22 +89,22 @@ Beispiel für Nachrichtenfenster:
 ### Datentypen
 <font size="4">
 
-| Typ                  | Wertebereich                | Beispiel |
-| -------------------- | --------------------------- | -------- |
-| **Ganze Zahlen**     |                             |          |
-| byte                 | -1238...127                 | 123      |
-| short                | -32768...32767              | 1234     |
-| int                  | $2\cdot 10^9...2\cdot 10^9$ | 12345    |
-| long                 | $-10^{19}...10^{19}$        | 123456L  |
-| **Gleitkommazahlen** |                             |          |
-| float                | $-10^{38}...10^{38}$        | 1.2f     |
-| double               | $-10^{308}...10^{308}$      | 1.2      |
-| **Wahrheitswert**    |                             |          |
-| boolean              | {true, false}               | true     |
-| **Zeichen**          |                             |          |
-| char                 | Unicode Zeichen             | 'c'      |
-| **Zeichenkette**     |                             |          |
-| String               |                             | "Hallo"  |
+| Typ                  | Wertebereich                 | Beispiel |
+| -------------------- | ---------------------------- | -------- |
+| **Ganze Zahlen**     |                              |          |
+| byte                 | -128...127                   | 123      |
+| short                | -32768...32767               | 1234     |
+| int                  | $-2\cdot 10^9...2\cdot 10^9$ | 12345    |
+| long                 | $-10^{19}...10^{19}$         | 123456L  |
+| **Gleitkommazahlen** |                              |          |
+| float                | $-10^{38}...10^{38}$         | 1.2f     |
+| double               | $-10^{308}...10^{308}$       | 1.2      |
+| **Wahrheitswert**    |                              |          |
+| boolean              | {true, false}                | true     |
+| **Zeichen**          |                              |          |
+| char                 | Unicode Zeichen              | 'c'      |
+| **Zeichenkette**     |                              |          |
+| String               |                              | "Hallo"  |
 
 </font>
 
