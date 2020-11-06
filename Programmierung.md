@@ -232,11 +232,10 @@ Aufgabe: Schreibe einen Chatbot, der mit dem Nutzer chattet. Sorge durch sinnvol
 <li class="fragment fade-in">Der Chatbot fragt den Nutzer nach seinem Namen und verwendet den Namen fortan</li>
 <li class="fragment fade-in">Der Chatbot stellt einige Ja/Nein-Fragen, die der Nutzer mit "Ja" oder "Nein" beantwortet</li>
 <li class="fragment fade-in">Abhängig von der Antwort des Nutzers, soll der Chatbot die Antwort kommentieren</li>
-<li class="fragment fade-in">Der Chatbot fragt nach dem Alter des Nutzers</li>
-<li class="fragment fade-in">Der Chatbot fragt, wie alt der Nutzer den Chatbot schätzt</li>
-<li class="fragment fade-in">Der Chatbot fragt, wie viele Wochen das gemeinsame Alter geschätzt wäre</li>
-<li class="fragment fade-in">Der Chatbot berechnet das gemeinsame Alter des Nutzers und des Chatbots in Wochen und gibt das Ergebnis aus</li>
-<li class="fragment fade-in">Der Chatbot gibt abhängig davon, ob man richtig, zu niedrig oder zu hoch geschätzt hat, eine entsprechende Antwort aus</li>
+<li class="fragment fade-in">Der Chatbot fragt nach dem Alter des Nutzers in Jahren</li>
+<li class="fragment fade-in">Der Chatbot fragt nach einer Schätzung des Nutzers, wie viele Tage das sind</li>
+<li class="fragment fade-in">Der Chatbot berechnet, ob der Nutzer richtig, zu hoch oder zu niedrig geschätzt hat und antwortet entsprechend </li>
+<li class="fragment fade-in">Der Chatbot verabschiedet sich und das Programm wird beendet</li>
 </font>
 
 ### Schleifen
