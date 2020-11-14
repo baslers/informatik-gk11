@@ -56,8 +56,8 @@ Unter anderem gibt es...
         - <div class="fragment fade-in">Mealy-Automaten</div>
 - <div class="fragment fade-in">$\omega$-Automaten</div>
 
-## Moore-Automaten
-Ein Moore-Automat kann als 7-Tupel  
+## Mealy-Automaten
+Ein Mealy-Automat kann als 7-Tupel  
 $A=(Q,\Sigma , \Omega , \delta, \lambda, q_0, F)$ definiert werden:
 
 - <div class="fragment fade-in">$Q$ ist eine endliche Menge von Zuständen</div>
@@ -70,7 +70,7 @@ $A=(Q,\Sigma , \Omega , \delta, \lambda, q_0, F)$ definiert werden:
 
 <div class="fragment fade-in">F kann weggelassen werden, wenn keine Sprache untersucht werden soll</div>
 
-## Beispiel Moore-Automaten
+## Beispiel Mealy-Automaten
 Arbeitsauftrag:  
 
 1. Gehe auf <https://bit.ly/2uMIBUo> und bearbeite auf den vier Unterseiten (System 1-4) die Aufgaben.
